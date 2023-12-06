@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC614B5A-1E32-468D-B5DB-B35B4887B8EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>arreglarTesis</RootNamespace>
+    <AssemblyName>arreglarTesis</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.102.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.102.1\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-adapter, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.bouncy-castle-adapter.8.0.2\lib\net461\itext.bouncy-castle-adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.commons.8.0.2\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=8.0.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itext.8.0.2\lib\net461\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcercaDe1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe1.designer.cs">
+      <DependentUpon>AcercaDe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEgresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEgresos.designer.cs">
+      <DependentUpon>AgregarEgresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarIngresos.designer.cs">
+      <DependentUpon>AgregarIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPersonas.designer.cs">
+      <DependentUpon>AgregarPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaLideres-C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaLideres-C.Designer.cs">
+      <DependentUpon>AltaLideres-C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaMentores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaMentores.Designer.cs">
+      <DependentUpon>AltaMentores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaMinisterios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaMinisterios.Designer.cs">
+      <DependentUpon>AltaMinisterios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaUsuarios.Designer.cs">
+      <DependentUpon>AltaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarMentor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarMentor.Designer.cs">
+      <DependentUpon>AsignarMentor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarMiembrosCelula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarMiembrosCelula.Designer.cs">
+      <DependentUpon>AsignarMiembrosCelula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTesoreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTesoreria.Designer.cs">
+      <DependentUpon>InformeTesoreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InhabilitarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InhabilitarPersonas.Designer.cs">
+      <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMentoreados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMentoreados.Designer.cs">
+      <DependentUpon>ListaMentoreados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMiembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMiembros.Designer.cs">
+      <DependentUpon>ListaMiembros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMiembrosCelula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMiembrosCelula.Designer.cs">
+      <DependentUpon>ListaMiembrosCelula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaMinisterios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaMinisterios.Designer.cs">
+      <DependentUpon>ListaMinisterios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMentor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMentor.Designer.cs">
+      <DependentUpon>ModificarMentor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_Personas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_Personas.Designer.cs">
+      <DependentUpon>Modificar_Personas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OlvideContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OlvideContraseña.Designer.cs">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPAdministracion.Designer.cs">
+      <DependentUpon>PPAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPPastor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPPastor.designer.cs">
+      <DependentUpon>PPPastor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostulacionesRevisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostulacionesRevisar.Designer.cs">
+      <DependentUpon>PostulacionesRevisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostularADiscipulado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostularADiscipulado.Designer.cs">
+      <DependentUpon>PostularADiscipulado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPmentor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPmentor.designer.cs">
+      <DependentUpon>PPmentor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPSuperUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPSuperUs.designer.cs">
+      <DependentUpon>PPSuperUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPTesoreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPTesoreria.designer.cs">
+      <DependentUpon>PPTesoreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroReunionesMentor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroReunionesMentor.Designer.cs">
+      <DependentUpon>RegistroReunionesMentor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcercaDe1.resx">
+      <DependentUpon>AcercaDe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEgresos.resx">
+      <DependentUpon>AgregarEgresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarIngresos.resx">
+      <DependentUpon>AgregarIngresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPersonas.resx">
+      <DependentUpon>AgregarPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaLideres-C.resx">
+      <DependentUpon>AltaLideres-C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaMentores.resx">
+      <DependentUpon>AltaMentores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaMinisterios.resx">
+      <DependentUpon>AltaMinisterios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaUsuarios.resx">
+      <DependentUpon>AltaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarMentor.resx">
+      <DependentUpon>AsignarMentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarMiembrosCelula.resx">
+      <DependentUpon>AsignarMiembrosCelula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTesoreria.resx">
+      <DependentUpon>InformeTesoreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InhabilitarPersonas.resx">
+      <DependentUpon>InhabilitarPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMentoreados.resx">
+      <DependentUpon>ListaMentoreados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMiembros.resx">
+      <DependentUpon>ListaMiembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMiembrosCelula.resx">
+      <DependentUpon>ListaMiembrosCelula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaMinisterios.resx">
+      <DependentUpon>ListaMinisterios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMentor.resx">
+      <DependentUpon>ModificarMentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_Personas.resx">
+      <DependentUpon>Modificar_Personas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvideContraseña.resx">
+      <DependentUpon>OlvideContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministracion.resx">
+      <DependentUpon>PPAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPPastor.resx">
+      <DependentUpon>PPPastor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostulacionesRevisar.resx">
+      <DependentUpon>PostulacionesRevisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostularADiscipulado.resx">
+      <DependentUpon>PostularADiscipulado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPmentor.resx">
+      <DependentUpon>PPmentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPSuperUs.resx">
+      <DependentUpon>PPSuperUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPTesoreria.resx">
+      <DependentUpon>PPTesoreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistroReunionesMentor.resx">
+      <DependentUpon>RegistroReunionesMentor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título %28468 x 425 px%29 %281%29.png" />
+    <None Include="Resources\1%282%29.png" />
+    <None Include="Resources\1%281%29.png" />
+    <Content Include="Resources\1.png" />
+    <Content Include="Resources\10.png" />
+    <None Include="Resources\Diseño sin título1.png" />
+    <None Include="Resources\Sin título %28520 x 258 px%29.png" />
+    <None Include="Resources\Sin título %28400 x 50 px%29.png" />
+    <None Include="Resources\Sin título %28520 x 258 px%29 %281%29.png" />
+    <None Include="Resources\Sin título %28520 x 258 px%29 %28253 x 300 px%29.png" />
+    <None Include="Resources\Sin título %28520 x 258 px%29 %282%29.png" />
+    <None Include="Resources\101.png" />
+    <Content Include="Resources\11.png" />
+    <None Include="Resources\111.png" />
+    <Content Include="Resources\12.png" />
+    <None Include="Resources\121.png" />
+    <Content Include="Resources\13.png" />
+    <None Include="Resources\131.png" />
+    <Content Include="Resources\14.png" />
+    <None Include="Resources\15.png" />
+    <None Include="Resources\16.png" />
+    <None Include="Resources\2%283%29.png" />
+    <None Include="Resources\2%282%29.png" />
+    <None Include="Resources\2%281%29.png" />
+    <Content Include="Resources\2.png" />
+    <Content Include="Resources\21.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\23.png" />
+    <None Include="Resources\3%281%29.png" />
+    <Content Include="Resources\3.png" />
+    <Content Include="Resources\31.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\33.png" />
+    <None Include="Resources\4%281%29.png" />
+    <Content Include="Resources\4.png" />
+    <Content Include="Resources\41.png" />
+    <None Include="Resources\42.png" />
+    <None Include="Resources\43.png" />
+    <None Include="Resources\5%281%29.png" />
+    <Content Include="Resources\5.png" />
+    <Content Include="Resources\51.png" />
+    <None Include="Resources\52.png" />
+    <None Include="Resources\53.png" />
+    <Content Include="Resources\6.png" />
+    <Content Include="Resources\61.png" />
+    <None Include="Resources\62.png" />
+    <None Include="Resources\63.png" />
+    <Content Include="Resources\7.png" />
+    <Content Include="Resources\71.png" />
+    <None Include="Resources\72.png" />
+    <None Include="Resources\73.png" />
+    <Content Include="Resources\8.png" />
+    <Content Include="Resources\81.png" />
+    <None Include="Resources\82.png" />
+    <None Include="Resources\83.png" />
+    <Content Include="Resources\9.png" />
+    <Content Include="Resources\91.png" />
+    <None Include="Resources\92.png" />
+    <None Include="Resources\93.png" />
+    <Content Include="Resources\Diseño sin título %281%29.png" />
+    <None Include="Resources\Diseño sin título %281%291.png" />
+    <Content Include="Resources\Diseño sin título %2810%29.png" />
+    <None Include="Resources\Diseño sin título %2810%291.png" />
+    <Content Include="Resources\Diseño sin título %2811%29.png" />
+    <None Include="Resources\Diseño sin título %2811%291.png" />
+    <Content Include="Resources\Diseño sin título %2812%29.png" />
+    <None Include="Resources\Diseño sin título %2812%291.png" />
+    <Content Include="Resources\Diseño sin título %2813%29.png" />
+    <None Include="Resources\Diseño sin título %2813%291.png" />
+    <None Include="Resources\Diseño sin título %2816%29.png" />
+    <Content Include="Resources\Diseño sin título %282%29.png" />
+    <None Include="Resources\Diseño sin título %282%291.png" />
+    <Content Include="Resources\Diseño sin título %283%29.png" />
+    <None Include="Resources\Diseño sin título %283%291.png" />
+    <Content Include="Resources\Diseño sin título %284%29.png" />
+    <None Include="Resources\Diseño sin título %284%291.png" />
+    <Content Include="Resources\Diseño sin título %285%29.png" />
+    <None Include="Resources\Diseño sin título %285%291.png" />
+    <Content Include="Resources\Diseño sin título %286%29.png" />
+    <None Include="Resources\Diseño sin título %286%291.png" />
+    <Content Include="Resources\Diseño sin título %287%29.png" />
+    <None Include="Resources\Diseño sin título %287%291.png" />
+    <Content Include="Resources\Diseño sin título %288%29.png" />
+    <None Include="Resources\Diseño sin título %288%291.png" />
+    <Content Include="Resources\Diseño sin título %289%29.png" />
+    <None Include="Resources\Diseño sin título %289%291.png" />
+    <Content Include="Resources\Diseño sin título.png" />
+    <None Include="Resources\Sin título %28400 x 50 px%29 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
