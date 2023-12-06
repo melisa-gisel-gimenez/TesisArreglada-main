@@ -148,5 +148,12 @@ namespace arreglarTesis
                 return builder.ToString();
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreUsuario.Text = "";
+            txtNuevaPass.Text = "";
+            txtRepetirPass.Text = "";
+        }
     }
 }
