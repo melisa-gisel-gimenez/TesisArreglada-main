@@ -149,11 +149,12 @@ namespace arreglarTesis
             }
         }
 
-        
+
 
         private void buttonAceptar_Click_1(object sender, EventArgs e)
         {
             ActualizarTablaMiembros();
+            actualizarCantidadCelula();
         }
 
         private void ActualizarTablaMiembros()
@@ -208,6 +209,7 @@ namespace arreglarTesis
 
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
+            txtDNIBuscar.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
             txtIdMiembro.Text = "";
@@ -219,5 +221,49 @@ namespace arreglarTesis
         {
             CargarIdCelulaEnComboBox();
         }
+
+        private void actualizarCantidadCelula()
+        {
+            int idCelulaSeleccionado = Convert.ToInt32(comboBoxCelula.SelectedValue);
+
+            // Establece la cadena de conexión
+            string connectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\MELIS\Documents\Baseiglesiaproduccion.mdb";
+
+            // Ahora, actualizamos la cantidad en la tabla Celula
+            string consultaActualizarCelula = "UPDATE Celula SET cantidad = cantidad + 1 WHERE Id_celula = @IdCelula";
+
+            using (OleDbConnection conexion = new OleDbConnection(connectionString))
+            {
+                using (OleDbCommand comandoActualizarCelula = new OleDbCommand(consultaActualizarCelula, conexion))
+                {
+                    comandoActualizarCelula.Parameters.AddWithValue("@IdCelula", idCelulaSeleccionado);
+
+                    try
+                    {
+                        conexion.Open();
+
+                        int filasAfectadasActualizarCelula = comandoActualizarCelula.ExecuteNonQuery();
+
+                        if (filasAfectadasActualizarCelula > 0)
+                        {
+                            MessageBox.Show("Se actualizó la cantidad en la tabla Celula con éxito.");
+                            //CargarCelulas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar la cantidad en la tabla Celula.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al actualizar la cantidad en la tabla Celula: " + ex.Message);
+                    }
+                }
+            }
+        }
+
     }
 }
+           
+    
+
