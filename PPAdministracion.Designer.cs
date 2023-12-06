@@ -35,13 +35,12 @@ namespace arreglarTesis
             this.agregarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarPersonasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarMiembrosDeCelulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarMiembrosACelulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeMiembrosPorCelulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaMiembrosPorMinisteriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.asignarMiembrosACelulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +51,7 @@ namespace arreglarTesis
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AdministracionToolStripMenuItem,
-            this.listasToolStripMenuItem,
-            this.acercaDeToolStripMenuItem});
+            this.listasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -76,23 +74,30 @@ namespace arreglarTesis
             // agregarPersonasToolStripMenuItem
             // 
             this.agregarPersonasToolStripMenuItem.Name = "agregarPersonasToolStripMenuItem";
-            this.agregarPersonasToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.agregarPersonasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.agregarPersonasToolStripMenuItem.Text = "Alta de miembros";
             this.agregarPersonasToolStripMenuItem.Click += new System.EventHandler(this.agregarPersonasToolStripMenuItem_Click);
             // 
             // modificarPersonasToolStripMenuItem
             // 
             this.modificarPersonasToolStripMenuItem.Name = "modificarPersonasToolStripMenuItem";
-            this.modificarPersonasToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.modificarPersonasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
             this.modificarPersonasToolStripMenuItem.Text = "Modificacion de miembros";
             this.modificarPersonasToolStripMenuItem.Click += new System.EventHandler(this.modificarPersonasToolStripMenuItem_Click_1);
             // 
             // registrarMiembrosDeCelulasToolStripMenuItem
             // 
             this.registrarMiembrosDeCelulasToolStripMenuItem.Name = "registrarMiembrosDeCelulasToolStripMenuItem";
-            this.registrarMiembrosDeCelulasToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.registrarMiembrosDeCelulasToolStripMenuItem.Text = "Registrar Miembros de Celulas";
+            this.registrarMiembrosDeCelulasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.registrarMiembrosDeCelulasToolStripMenuItem.Text = "Alta de Celulas";
             this.registrarMiembrosDeCelulasToolStripMenuItem.Click += new System.EventHandler(this.registrarMiembrosDeCelulasToolStripMenuItem_Click);
+            // 
+            // asignarMiembrosACelulasToolStripMenuItem
+            // 
+            this.asignarMiembrosACelulasToolStripMenuItem.Name = "asignarMiembrosACelulasToolStripMenuItem";
+            this.asignarMiembrosACelulasToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.asignarMiembrosACelulasToolStripMenuItem.Text = "Asignar Miembros a Celulas";
+            this.asignarMiembrosACelulasToolStripMenuItem.Click += new System.EventHandler(this.asignarMiembrosACelulasToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
             // 
@@ -125,13 +130,6 @@ namespace arreglarTesis
             this.listaMiembrosPorMinisteriosToolStripMenuItem.Text = "Lista Miembros por Ministerios";
             this.listaMiembrosPorMinisteriosToolStripMenuItem.Click += new System.EventHandler(this.listaMiembrosPorMinisteriosToolStripMenuItem_Click);
             // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de";
-            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -143,13 +141,6 @@ namespace arreglarTesis
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // asignarMiembrosACelulasToolStripMenuItem
-            // 
-            this.asignarMiembrosACelulasToolStripMenuItem.Name = "asignarMiembrosACelulasToolStripMenuItem";
-            this.asignarMiembrosACelulasToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
-            this.asignarMiembrosACelulasToolStripMenuItem.Text = "Asignar Miembros a Celulas";
-            this.asignarMiembrosACelulasToolStripMenuItem.Click += new System.EventHandler(this.asignarMiembrosACelulasToolStripMenuItem_Click);
             // 
             // PPAdministracion
             // 
@@ -180,7 +171,6 @@ namespace arreglarTesis
         private System.Windows.Forms.ToolStripMenuItem AdministracionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarPersonasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarPersonasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miembrosToolStripMenuItem;

@@ -51,10 +51,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 314);
+            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(172, 311);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(140, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mentoreados";
             // 
@@ -77,44 +77,46 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(108, 189);
+            this.label4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(97, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Apellido:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(108, 152);
+            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(98, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 15);
+            this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Nombre:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 97);
+            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 15);
+            this.label2.Size = new System.Drawing.Size(177, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Ingresar DNI Mentor:";
             // 
             // txtDNIBuscar
             // 
-            this.txtDNIBuscar.Location = new System.Drawing.Point(177, 91);
+            this.txtDNIBuscar.Location = new System.Drawing.Point(195, 94);
             this.txtDNIBuscar.Name = "txtDNIBuscar";
             this.txtDNIBuscar.Size = new System.Drawing.Size(153, 22);
             this.txtDNIBuscar.TabIndex = 10;
+            this.txtDNIBuscar.TextChanged += new System.EventHandler(this.textBoxDNIBuscar_TextChanged_1);
+            this.txtDNIBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNIBuscar_KeyPress);
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("buttonBuscar.Image")));
-            this.buttonBuscar.Location = new System.Drawing.Point(356, 78);
+            this.buttonBuscar.Location = new System.Drawing.Point(359, 81);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(60, 48);
             this.buttonBuscar.TabIndex = 9;
@@ -124,10 +126,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(128, 42);
+            this.label5.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(84, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 18);
+            this.label5.Size = new System.Drawing.Size(332, 28);
             this.label5.TabIndex = 8;
             this.label5.Text = "Lista de Mentoreados por Mentor";
             // 
@@ -155,10 +157,10 @@
             // btnCargar
             // 
             this.btnCargar.Enabled = false;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(176, 235);
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Location = new System.Drawing.Point(158, 235);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(72, 46);
+            this.btnCargar.Size = new System.Drawing.Size(90, 46);
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "Mostrar ";
             this.btnCargar.UseVisualStyleBackColor = true;
@@ -180,15 +182,15 @@
             this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 553);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 580);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
             // btnDescargar
             // 
-            this.btnDescargar.Location = new System.Drawing.Point(191, 498);
+            this.btnDescargar.Location = new System.Drawing.Point(177, 508);
             this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(107, 39);
+            this.btnDescargar.Size = new System.Drawing.Size(117, 49);
             this.btnDescargar.TabIndex = 21;
             this.btnDescargar.Text = "Descargar";
             this.btnDescargar.UseVisualStyleBackColor = true;
@@ -198,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 545);
+            this.ClientSize = new System.Drawing.Size(493, 579);
             this.Controls.Add(this.btnDescargar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dgvMentoreados);

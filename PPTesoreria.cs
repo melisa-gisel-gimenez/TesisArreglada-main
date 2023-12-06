@@ -31,19 +31,7 @@ namespace Iglesia
             Form1.ShowDialog();
         }
 
-
-
-        private void agregarIngresosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarIngresos Form1 = new AgregarIngresos();
-            Form1.ShowDialog();
-        }
-
-        private void agregarEgresosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AgregarEgresos Form1 = new AgregarEgresos();
-            Form1.ShowDialog();
-        }
+               
 
         private void PPTesoreria_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -60,6 +48,18 @@ namespace Iglesia
         private void PPTesoreria_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarIngresos Form1 = new AgregarIngresos();
+            Form1.ShowDialog();
+        }
+
+        private void egresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarEgresos Form1 = new AgregarEgresos();
+            Form1.ShowDialog();
         }
     }
 }

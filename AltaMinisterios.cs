@@ -314,5 +314,15 @@ namespace Iglesia
                 MessageBox.Show("Error al actualizar la tabla Miembros: " + ex.Message);
             }
         }
+
+        private void buttonLimpiar_Click_1(object sender, EventArgs e)
+        {
+            textBoxNombreMini.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtIdMiembro.Text = string.Empty;
+            txtEtapa.Text = string.Empty;
+            txtRoli.Text = string.Empty;
+        }
     }
 }

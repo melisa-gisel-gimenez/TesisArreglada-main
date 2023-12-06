@@ -46,7 +46,7 @@
             // 
             this.comboBox1TipoIngreso.FormattingEnabled = true;
             this.comboBox1TipoIngreso.Location = new System.Drawing.Point(196, 89);
-            this.comboBox1TipoIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1TipoIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1TipoIngreso.Name = "comboBox1TipoIngreso";
             this.comboBox1TipoIngreso.Size = new System.Drawing.Size(181, 24);
             this.comboBox1TipoIngreso.TabIndex = 35;
@@ -56,7 +56,7 @@
             // 
             this.button3Limpiar.Font = new System.Drawing.Font("Calibri Light", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3Limpiar.Location = new System.Drawing.Point(407, 198);
-            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3Limpiar.Margin = new System.Windows.Forms.Padding(4);
             this.button3Limpiar.Name = "button3Limpiar";
             this.button3Limpiar.Size = new System.Drawing.Size(104, 39);
             this.button3Limpiar.TabIndex = 47;
@@ -66,14 +66,14 @@
             // 
             // button1Guardar
             // 
-            this.button1Guardar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1Guardar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1Guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1Guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1Guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.button1Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1Guardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1Guardar.Font = new System.Drawing.Font("Microsoft Yi Baiti", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1Guardar.Location = new System.Drawing.Point(407, 109);
-            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.button1Guardar.Name = "button1Guardar";
             this.button1Guardar.Size = new System.Drawing.Size(104, 47);
             this.button1Guardar.TabIndex = 46;
@@ -84,36 +84,36 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label6.Location = new System.Drawing.Point(221, 67);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 19);
+            this.label6.Size = new System.Drawing.Size(140, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Tipo de Ingreso:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label2.Location = new System.Drawing.Point(246, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 19);
+            this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Detalle:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(251, 198);
+            this.label3.Location = new System.Drawing.Point(246, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 19);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Monto:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -122,8 +122,8 @@
             // 
             this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDetalle.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtDetalle.Location = new System.Drawing.Point(196, 147);
-            this.txtDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDetalle.Location = new System.Drawing.Point(196, 150);
+            this.txtDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(181, 23);
             this.txtDetalle.TabIndex = 2;
@@ -133,7 +133,7 @@
             this.txtMONTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMONTO.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtMONTO.Location = new System.Drawing.Point(211, 237);
-            this.txtMONTO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMONTO.Margin = new System.Windows.Forms.Padding(4);
             this.txtMONTO.Name = "txtMONTO";
             this.txtMONTO.Size = new System.Drawing.Size(132, 23);
             this.txtMONTO.TabIndex = 3;
@@ -153,10 +153,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 35);
+            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 24);
+            this.label1.Size = new System.Drawing.Size(246, 28);
             this.label1.TabIndex = 52;
             this.label1.Text = "Cargar datos del Ingreso:";
             // 
@@ -177,7 +177,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(673, 423);
             this.MinimizeBox = false;

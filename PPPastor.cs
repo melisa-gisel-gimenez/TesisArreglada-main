@@ -101,5 +101,17 @@ namespace Iglesia
         {
             Application.Exit();
         }
+
+        private void listaMinisteriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MiembrosMinisterios form = new MiembrosMinisterios();
+            form.ShowDialog();
+        }
+
+        private void listaMentoreadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaMentoreados form1 = new ListaMentoreados();
+            form1.ShowDialog();
+        }
     }
 }

@@ -204,7 +204,7 @@ namespace Iglesia
 
             textBoxIDMiembro.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[0].Value.ToString();
             //textBoxDNI.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxNombre.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxNombre.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[1].Value.ToString() + " " + DGV1.Rows[DGV1.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxMentorAsignado.Text = DGV1.Rows[DGV1.CurrentRow.Index].Cells[3].Value.ToString();
 
             button2.Enabled = true;
@@ -219,7 +219,7 @@ namespace Iglesia
             button2.Enabled = false;
 
             textBoxIdMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxNombreMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxNombreMentor.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[1].Value.ToString() + " " + DGV2.Rows[DGV2.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxCantidad.Text = DGV2.Rows[DGV2.CurrentRow.Index].Cells[4].Value.ToString();
             cantidadMentoreados = int.Parse(textBoxCantidad.Text);
 

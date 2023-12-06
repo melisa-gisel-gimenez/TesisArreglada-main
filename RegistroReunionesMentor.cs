@@ -128,5 +128,28 @@ namespace Iglesia
             this.Close();
         }
 
+        private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada no es un dígito numérico o una tecla de control
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es un número o una tecla de control, ignora la tecla presionada
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDNI_TextChanged_1(object sender, EventArgs e)
+        {
+            // Verifica si la longitud del texto en el TextBox es mayor a 8
+            if (textBoxDNI.Text.Length > 8)
+            {
+                // Si es mayor a 8, recorta el texto para que solo tenga 8 caracteres
+                //txtDNI.Text = txtDNI.Text.Substring(0, 8);
+                // Coloca el cursor al final del texto
+                textBoxDNI.SelectionStart = textBoxDNI.Text.Length;
+                MessageBox.Show("Solo puede ingresar 8 números. Por favor, verifique el DNI ingresado");
+            }
+        }
+
     }
 }
