@@ -161,14 +161,34 @@ namespace Iglesia
 
         private void txtMONTO_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verifica si la tecla presionada no es un dígito numérico o una tecla de control
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            // Verifica si el carácter ingresado es un número o un punto decimal
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
-                // Si no es un número o una tecla de control, ignora la tecla presionada
+                e.Handled = true; // Ignora el carácter si no es válido
+            }
+
+            // Verifica si ya hay un punto decimal y evita que se ingresen más de uno
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+
+            // Limita a dos decimales
+            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') == -1)
+            {
+                // Permite el primer punto decimal
+                return;
+            }
+
+            // Limita a dos decimales después del punto
+            if ((sender as TextBox).Text.IndexOf('.') > -1 &&
+                (sender as TextBox).Text.Split('.')[1].Length >= 2 &&
+                !char.IsControl(e.KeyChar))
+            {
                 e.Handled = true;
             }
         }
-    
+       
 
 
         private void label7_Click(object sender, EventArgs e)

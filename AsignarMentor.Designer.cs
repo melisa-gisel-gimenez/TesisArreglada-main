@@ -84,7 +84,7 @@ namespace Iglesia
             // 
             this.DGV1.AllowUserToAddRows = false;
             this.DGV1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.DGV1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -134,7 +134,7 @@ namespace Iglesia
             // 
             this.DGV2.AllowUserToAddRows = false;
             this.DGV2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.DGV2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGV2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
